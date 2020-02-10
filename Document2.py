@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import discord
 import glob
 from discord.ext import commands,tasks
