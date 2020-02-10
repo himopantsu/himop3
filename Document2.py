@@ -32,7 +32,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-	dm = await message.author.create_dm()
+	dm = await member.create_dm()
 	await dm.send(f"{message.author.mention}さんゲーム参加ありがとう！ゲームの説明をするね\nどうやらこの島のどこかに宝が隠されているようなんだ。\n")
 	await dm.send(file=discord.File("map1.png"))
 	await dm.send(f"これがその地図。でも、この地図が本物なのかわからないから町の長老に聞いたんだ。そうしたらこんな謎を出されたんだ・・・・")
