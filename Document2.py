@@ -42,7 +42,23 @@ async def on_message(message):
 	"""メッセージを処理"""
 	if message.author.bot:  # ボットのメッセージをハネる
 		return
-		
+	
+	elif message.attachments:
+		headers = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0",}
+		request = urllib.request.Request(url=str(message.attachments[0].url),headers=headers)
+		f = io.BytesIO(urllib.request.urlopen(request).read())
+		validation_img = Image.open("horntale_necklace.png")
+		validation_grayimg = validation_img.convert('L')
+		validation_array = np.asarray(validation_grayimg)
+		img = Image.open(f)
+		grayimg = img.convert('L')
+		input_array = np.asarray(grayimg)
+		custom_cascade = cv2.CascadeClassifier('cascade.xml')
+		custom_rect = custom_cascade.detectMultiScale(grayimg, scaleFactor=1.07, minNeighbors=2, minSize=(1, 1))
+		if len(custom_rect) == 0:
+			return
+		else: await message.channel.send(f"あるよ")
+	
 	elif message.content == "!やるじゃん":
 		await message.channel.send(f"ありがとう")
 
