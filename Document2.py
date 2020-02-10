@@ -2,7 +2,7 @@ import discord
 import glob
 from discord.ext import commands,tasks
 import gspread
-import random  # おみくじで使用
+import random 
 from oauth2client.service_account import ServiceAccountCredentials
 import numpy as np
 import pandas as pd
