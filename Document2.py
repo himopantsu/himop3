@@ -119,8 +119,7 @@ async def on_message(message):
 		await dm.send("戦士「正解！では例の如く次の場所を教える。\n戦士「着いたら妖精を訪ねなさい」")
 		await dm.send(file=discord.File("map6.png"))
 		await dm.send(f"=====G-5移動中=====")
-		await dm.send(f"妖精「・・・・・」\n
-		妖精「ごめんなさい人間と会話するのに慣れていないんです。」\n妖精「ヒントが欲しければ堕落した女王を追いかけてその先に何があるのか答えてください」")
+		await dm.send(f"妖精「・・・・・」\n妖精「ごめんなさい人間と会話するのに慣れていないんです。」\n妖精「ヒントが欲しければ堕落した女王を追いかけてその先に何があるのか答えてください」")
 		await dm.send(file=discord.File("nazo6.png"))
 		
 	elif message.content =="!ジャクム!:
