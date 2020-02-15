@@ -61,14 +61,14 @@ async def on_message(message):
 			return
 		else:
 			dm = await message.author.create_dm()
-			await dm.send(f"踊り子「これだ！！！」\n踊り子「このネックレスこそ力の証明!」\n踊り子「次はここへ行きなさい」")
+			await dm.send(f"踊り子「これだ！！！」\n踊り子「このネックレスこそ力の証明!」\n踊り子「次はここへ行きなさい。」")
 			await dm.send(file=discord.File("map5.png"))
 			await dm.send(f"みんなのおかげでここまで来れたよ！！本当にありがとう！まだ道は長いかもしれないけども一緒にがんばろ！")
 			await dm.send(f"=====G-7移動中=====")
 			await dm.send(f"戦士「何者だ！」")
 			await dm.send(f"え！怪しい者じゃないです！踊り子にここに行けと言われて････")
-			await dm.send(f"戦士「そうだったか。それはすまなかった。実はここは彼らに狙われていてその手先と勘違いしてしまったんだ")
-			await dm.send(f"戦士「踊りの紹介でここに来たと言ったな。ではこの問題を解いてみろ")
+			await dm.send(f"戦士「そうだったか。それはすまなかった。実はここは彼らに狙われていてその手先と勘違いしてしまったんだ。」")
+			await dm.send(f"戦士「踊りの紹介でここに来たと言ったな。ではこの問題を解いてみろ。」")
 			await dm.send(file=discord.File("nazo5.png"))
 	
 	elif message.content == "!やるじゃん":
@@ -83,7 +83,7 @@ async def on_message(message):
 	elif message.content == "!ホーンテイル":
 		dm = await message.author.create_dm()
 		await dm.send(f"そうか！ホーンテイルか！\n長老、答えはホーンテイルだ！")
-		await dm.send(f"長老「答えは合っている。だが、この町では大人しくしといたほうが身のためだぞ！")
+		await dm.send(f"長老「答えは合っている。だが、この町では大人しくしといたほうが身のためだぞ！」")
 		await dm.send(f"長老「次の街の手がかりを教える。この町へ向かい、情報屋を訪ねるんだ」")
 		await dm.send(file=discord.File("map2.png"))
 		await dm.send(f"どうやら次はD-11の町へ向かえば良いんだね")
@@ -109,21 +109,21 @@ async def on_message(message):
 		await dm.send(file=discord.File("map4.png"))
 		await dm.send(f"さっきからたらい回しでなんやねんほんまによ\nひとまず次向かおう！")
 		await dm.send(f"=====H-8移動中=====")
-		await dm.send(f"踊り子「よくここまで来た。きっと利口なのだろう。」\n踊り子「しかし、ここでは強いものだけが生き残れる。」\n踊り子「お前の強さを証明してみせろ\n□→■の★→▼を見せろ」")
+		await dm.send(f"踊り子「よくここまで来た。きっと利口なのだろう。」\n踊り子「しかし、ここでは強いものだけが生き残れる。」\n踊り子「お前の強さを証明してみせろ」\踊り子「n□→■の★→▼を見せろ」")
 		
 	elif message.content =="!ルミナス":
 		dm = await message.author.create_dm()
 		await dm.send("戦士「正解！では例の如く次の場所を教える。\n戦士「着いたら妖精を訪ねなさい」")
 		await dm.send(file=discord.File("map6.png"))
 		await dm.send(f"=====G-5移動中=====")
-		await dm.send(f"妖精「・・・・・」\n妖精「ごめんなさい人間と会話するのに慣れていないんです。」\n妖精「ヒントが欲しければ堕落した女王を追いかけてその先に何があるのか答えてください」")
+		await dm.send(f"妖精「・・・・・」\n妖精「ごめんなさい人間と会話するのに慣れていないんです。」\n妖精「ヒントが欲しければ堕落した女王を追いかけてその先に何があるのか答えてください。」")
 		await dm.send(file=discord.File("nazo6.png"))
 		
 	elif message.content =="!ジャクム":
 		dm = await message.author.create_dm()
-		await dm.send(f"妖精「正解です。では宝の隠し場所を教えます。あなたたちが3番目に訪れた街のどこかに宝の隠し場所が座標で書き記されています。")
-		await dm.send(f"妖精「そしてその座標で示されたエリアの上にある場所こそ隠し場所です")
-		await dm.send(f"妖精「それではラストスパート頑張ってください。")
+		await dm.send(f"妖精「正解です。では宝の隠し場所を教えます。」\n妖精「あなたたちが3番目に訪れた街のどこかに宝の隠し場所が座標で書き記されています。」")
+		await dm.send(f"妖精「そしてその座標で示されたエリアの上にある場所こそ隠し場所です。」")
+		await dm.send(f"妖精「それではラストスパート頑張ってください。」")
 		
 	elif message.content == "!カクサレタモリ":
 		dm = await message.author.create_dm()
