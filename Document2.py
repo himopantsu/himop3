@@ -52,9 +52,6 @@ async def on_message(message):
 		headers = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0",}
 		request = urllib.request.Request(url=str(message.attachments[0].url),headers=headers)
 		f = io.BytesIO(urllib.request.urlopen(request).read())
-		validation_img = Image.open("horntale_necklace.png")
-		validation_grayimg = validation_img.convert('L')
-		validation_array = np.asarray(validation_grayimg)
 		img = Image.open(f)
 		grayimg = img.convert('L')
 		input_array = np.asarray(grayimg)
@@ -108,7 +105,7 @@ async def on_message(message):
 	
 	elif message.content =="!チェロ":
 		dm = await message.author.create_dm()
-		await dm.send(f"制作屋「よくわかったな。この街程危ない取引に適した場所はないが、これだけは教えられない\n代わりに次の町の踊り子を訪ねろ」")
+		await dm.send(f"制作屋「よくわかったな。この街程危ない取引に適した場所はないが、これだけは教えられない」\n制作屋「代わりに次の町の踊り子を訪ねろ」")
 		await dm.send(file=discord.File("map4.png"))
 		await dm.send(f"さっきからたらい回しでなんやねんほんまによ\nひとまず次向かおう！")
 		await dm.send(f"=====H-8移動中=====")
