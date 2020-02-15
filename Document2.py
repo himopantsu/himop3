@@ -63,7 +63,8 @@ async def on_message(message):
 		if len(custom_rect) == 0:
 			return
 		else:
-			await message.channel.send(f"踊り子「これだ！！！」\n踊り子「このネックレスこそ力の証明!」\n踊り子「次はここへ行きなさい」")
+			dm = await message.author.create_dm()
+			await dm.send(f"踊り子「これだ！！！」\n踊り子「このネックレスこそ力の証明!」\n踊り子「次はここへ行きなさい」")
 			await dm.send(file=discord.File("map5.png"))
 			await dm.send(f"みんなのおかげでここまで来れたよ！！本当にありがとう！まだ道は長いかもしれないけども一緒にがんばろ！")
 			await dm.send(f"=====G-7移動中=====")
@@ -106,6 +107,7 @@ async def on_message(message):
 		await dm.send(file=discord.File("nazo3.png"))
 	
 	elif message.content =="!チェロ":
+		dm = await message.author.create_dm()
 		await dm.send(f"制作屋「よくわかったな。この街程危ない取引に適した場所はないが、これだけは教えられない\n代わりに次の町の踊り子を訪ねろ」")
 		await dm.send(file=discord.File("map4.png"))
 		await dm.send(f"さっきからたらい回しでなんやねんほんまによ\nひとまず次向かおう！")
@@ -113,6 +115,7 @@ async def on_message(message):
 		await dm.send(f"踊り子「よくここまで来た。きっと利口なのだろう。」\n踊り子「しかし、ここでは強いものだけが生き残れる。」\n踊り子「お前の強さを証明してみせろ\n□→■の★→▼を見せろ」")
 		
 	elif message.content =="!ルミナス":
+		dm = await message.author.create_dm()
 		await dm.send("戦士「正解！では例の如く次の場所を教える。\n戦士「着いたら妖精を訪ねなさい」")
 		await dm.send(file=discord.File("map6.png"))
 		await dm.send(f"=====G-5移動中=====")
@@ -121,18 +124,18 @@ async def on_message(message):
 		await dm.send(file=discord.File("nazo6.png"))
 		
 	elif message.content =="!ジャクム!:
+		dm = await message.author.create_dm()
 		await dm.send(f"妖精「正解です。では宝の隠し場所を教えます。あなたたちが3番目に訪れた街のどこかに宝の隠し場所が座標で書き記されています。")
 		await dm.send(f"妖精「そしてその座標で示されたエリアの上にある場所こそ隠し場所です")
 		await dm.send(f"妖精「それではラストスパート頑張ってください。")
 		
 	elif message.content == "!カクサレタモリ":
+		dm = await message.author.create_dm()
 		await dm.send(f"わかった！！！隠された森に宝があるんだ！！！！！！！！！")
 		await dm.send(f"ありがとう皆のおかげで謎を解くことができた。\nこれはお礼の印！ https://twitter.com/himo_pantsu/status/1228671519124905985 \nまた遊んでね！")
 		CHANNEL_ID = 663680317160292355
 		channel = client.get_channel(CHANNEL_ID)
-		await channel.send(f"{member.mention} さんこんにちはしゃくし～です")
-		await channel.send(f"まずは<#{setumei}>の確認と<#{jikosyoukai}>の記入をお願いします")
-		await channel.send(f"これからよろしくお願いします!")
+		await channel.send(f"{message.author.mention} さんがクリアしました！おめでとうございます！")
 			      
 
 client.run(bot_token)
