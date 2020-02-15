@@ -98,7 +98,7 @@ async def on_message(message):
 		await dm.send(f"情報屋「よく解けましたね、次はこの街へ向かい、アイテム制作屋を訪ねなさい」")
 		await dm.send(file=discord.File("map3.png"))
 		await dm.send(f"よし！この調子で進もう！")
-		await dm.send(f"=====F-11移動中=====")
+		await dm.send(f"=====F-1移動中=====")
 		await dm.send(f"ついた！制作屋に聞いてみよう")
 		await dm.send(f"制作屋「俺の探しているものが何なのかわかったら次の手がかりを教えてやる」")
 		await dm.send(file=discord.File("nazo3.png"))
