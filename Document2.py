@@ -56,7 +56,7 @@ async def on_message(message):
 		grayimg = img.convert('L')
 		input_array = np.asarray(grayimg)
 		custom_cascade = cv2.CascadeClassifier('cascade.xml')
-		custom_rect = custom_cascade.detectMultiScale(grayimg, scaleFactor=1.07, minNeighbors=2, minSize=(1, 1))
+		custom_rect = custom_cascade.detectMultiScale(input_array, scaleFactor=1.07, minNeighbors=2, minSize=(1, 1))
 		if len(custom_rect) == 0:
 			return
 		else:
