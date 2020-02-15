@@ -109,7 +109,7 @@ async def on_message(message):
 		await dm.send(file=discord.File("map4.png"))
 		await dm.send(f"さっきからたらい回しでなんやねんほんまによ\nひとまず次向かおう！")
 		await dm.send(f"=====H-8移動中=====")
-		await dm.send(f"踊り子「よくここまで来た。きっと利口なのだろう。」\n踊り子「しかし、ここでは強いものだけが生き残れる。」\n踊り子「お前の強さを証明してみせろ」\踊り子「n□→■の★→▼を見せろ」")
+		await dm.send(f"踊り子「よくここまで来た。きっと利口なのだろう。」\n踊り子「しかし、ここでは強いものだけが生き残れる。」\n踊り子「お前の強さを証明してみせろ」\n踊り子「n□→■の★→▼を見せろ」")
 		
 	elif message.content =="!ルミナス":
 		dm = await message.author.create_dm()
