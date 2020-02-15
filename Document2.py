@@ -36,7 +36,7 @@ async def on_member_join(member):
 	await dm.send(f"{member.mention}さんゲーム参加ありがとう！ゲームの説明をするね\nどうやらこの地図に描いてある島のどこかに宝が隠されているようなんだ。\n")
 	await dm.send(file=discord.File("map1.png"))
 	await dm.send(f"これがその地図。\n今いる場所がちょうど赤い点のあるD-8だよ。\nこの町の長老にこの地図について知っているか聞いたんだ\nそうしたら「まずはこの謎を解いてみろ」って言われたんだけど・・・・")
-	await dm.send(f"正直俺わからなくて････。")
+	await dm.send(f"正直全然わからなくて････。")
 	await dm.send(file=discord.File("nazo1.png"))
 	await dm.send(f"もしも解けたら答えを教えてほしい！。あ、解答するときはカタカナにして解答の前に[!]を付けてね")
 	await dm.send(f"(例:解答が「メイプルキノコ」の場合「!メイプルキノコ」と発言してください。")
@@ -80,7 +80,7 @@ async def on_message(message):
 		await dm.send(f"長老「次の街の手がかりを教える。この町へ向かい、情報屋を訪ねるんだ」")
 		await dm.send(file=discord.File("map2.png"))
 		await dm.send(f"どうやら次はD-11の町へ向かえば良いんだね")
-		await dm.send(f"================================")
+		await dm.send(f"=====D-11移動中=====")
 		await dm.send(f"というわけで町について情報屋を見つけたよ！")
 		await dm.send(f"どうやら情報屋も手掛かりを教えてくれるらしい\nただし、この謎を解けたらだけど・・・・")
 		await dm.send(file=discord.File("nazo2.png"))
@@ -88,10 +88,11 @@ async def on_message(message):
 	elif message.content == "!サメ":
 		dm = await message.author.create_dm()
 		await dm.send(f"答えはサメだ！\nまったく、癪に障る問題だね")
-		await dm.send(f"次の手がかりをもらったよ！")
+		await dm.send(f"情報屋「よく解けましたね、次はこの街へ向かい、アイテム制作屋を訪ねなさい」")
 		await dm.send(file=discord.File("map3.png"))
-		await dm.send(f"この街のアイテム制作屋を訪ねなさいと言っていたよ\nじゃあ向かおう")
-		await dm.send(f"================================")
+		await dm.send(f"よし！この調子で進もう！")
+		await dm.send(f"=====F-11移動中=====")
+		await dm.send(f"制作屋「
 		
 		
 
