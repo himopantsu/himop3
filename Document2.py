@@ -128,7 +128,11 @@ async def on_message(message):
 	elif message.content == "!カクサレタモリ":
 		await dm.send(f"わかった！！！隠された森に宝があるんだ！！！！！！！！！")
 		await dm.send(f"ありがとう皆のおかげで謎を解くことができた。\nこれはお礼の印！ https://twitter.com/himo_pantsu/status/1228671519124905985 \nまた遊んでね！")
-		
+		CHANNEL_ID = 663680317160292355
+		channel = client.get_channel(CHANNEL_ID)
+		await channel.send(f"{member.mention} さんこんにちはしゃくし～です")
+		await channel.send(f"まずは<#{setumei}>の確認と<#{jikosyoukai}>の記入をお願いします")
+		await channel.send(f"これからよろしくお願いします!")
 			      
 
 client.run(bot_token)
