@@ -136,7 +136,7 @@ async def on_message(message):
 	elif message.content == "!!答え":
 		dm = await message.author.create_dm()
 		await dm.send(f"答えはこちら！\n https://docs.google.com/document/d/11NWBYejPOK3aWPynqzq15FEz_Q54XFxXcAJp1aG65tg/edit")
-		channel_id = 679358497196081165
+		CHANNEL_ID = 679358497196081165
 		channel = client.get_channel(CHANNEL_ID)
 		await channel.send(f"{message.author.mention} さんが答えを見ました")
 		
